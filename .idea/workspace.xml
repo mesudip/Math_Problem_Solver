@@ -1,15 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="27c719fb-fa4b-4e02-9e30-18e45f508563" name="Default" comment="Restructured">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/general_ai/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/general_ai/function" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/general_ai/world_context.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/neural_net/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/neural_net/tensor_net.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/text_processor/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/text_processor/classifier.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/text_processor/data_set.py" afterPath="" />
+    <list default="true" id="27c719fb-fa4b-4e02-9e30-18e45f508563" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Foreign resources/240-T0031.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Foreign resources/Arithmetic_Word_Problems.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Foreign resources/D15-1135.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Foreign resources/kazb-acl14.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Foreign resources/verbnet-3.2.tar.gz" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dataset/dataset.sqlite3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/documentation/IEEEtran_HOWTO.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/documentation/figures/Short Hands.odg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/documentation/figures/abbrevations.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/documentation/figures/sentence1.odg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/documentation/figures/sentence1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/documentation/figures/sentence2.odg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/documentation/figures/sentence2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/documentation/figures/sentence3.odg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/documentation/figures/sentence3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/documentation/figures/step2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/documentation/figures/step3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/documentation/figures/step4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/documentation/figures/step4_2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/documentation/figures/step5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/documentation/figures/step6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/documentation/figures/wolframalpha_query1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/documentation/figures/wolframalpha_query2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/documentation/main.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/documentation/main.synctex.gz" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/documentation/picture.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dataset/dataset.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/documentation/.main.tex.swp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/documentation/.~lock.main.pdf#" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/documentation/IEEEtran.cls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/documentation/figures/.~lock.Short Hands.odg#" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/documentation/figures/.~lock.sentence2.odg#" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/documentation/figures/sentence1.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/documentation/figures/sentence1.tex" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/documentation/figures/sentence2.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/documentation/main.aux" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/documentation/main.log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/documentation/main.tex" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/documentation/main.tex.bak" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/general_ai/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/general_ai/function" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/general_ai/world_context.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/neural_net/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/neural_net/tensor_net.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/text_processor/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/text_processor/classifier.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/text_processor/data_set.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/text_processor/equation_processor.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,41 +62,23 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="session.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../lib/python3.5/site-packages/tensorflow/python/client/session.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="788" column="0" lean-forward="false" selection-start-line="788" selection-start-column="0" selection-end-line="788" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="classifier.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/text_processor/classifier.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="66" column="23" lean-forward="false" selection-start-line="66" selection-start-column="23" selection-end-line="66" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="data_set.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="data_set.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/text_processor/data_set.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="82" column="38" lean-forward="false" selection-start-line="82" selection-start-column="38" selection-end-line="82" selection-end-column="38" />
-              <folding />
+            <state relative-caret-position="291">
+              <caret line="127" column="33" lean-forward="true" selection-start-line="127" selection-start-column="33" selection-end-line="127" selection-end-column="33" />
+              <folding>
+                <element signature="e#19#30#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ops.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../lib/python3.5/site-packages/tensorflow/python/framework/ops.py">
+      <file leaf-file-name="equation_processor.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/text_processor/equation_processor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42272">
-              <caret line="2672" column="0" lean-forward="false" selection-start-line="2672" selection-start-column="0" selection-end-line="2672" selection-end-column="0" />
+            <state relative-caret-position="16">
+              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -97,6 +119,7 @@
         <option value="$PROJECT_DIR$/neural_net/tensor_net.py" />
         <option value="$PROJECT_DIR$/text_processor/data_set.py" />
         <option value="$PROJECT_DIR$/src/text_processor/data_set.py" />
+        <option value="$PROJECT_DIR$/src/text_processor/equation_processor.py" />
       </list>
     </option>
   </component>
@@ -217,25 +240,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.data_set (1)">
-    <configuration default="false" name="operations" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/math_operations" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="src" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/math_operations/operations" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.data_set">
     <configuration default="false" name="data_set" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -243,48 +248,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/data_importer" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/text_processor" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="src" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data_importer/data_set.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="tensor_net" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/neural_net" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="src" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/neural_net/tensor_net.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="data_set (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/text_processor" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="src" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/text_processor/data_set.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/text_processor/data_set.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -354,18 +323,12 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method />
     </configuration>
-    <list size="4">
-      <item index="0" class="java.lang.String" itemvalue="Python.operations" />
-      <item index="1" class="java.lang.String" itemvalue="Python.data_set" />
-      <item index="2" class="java.lang.String" itemvalue="Python.tensor_net" />
-      <item index="3" class="java.lang.String" itemvalue="Python.data_set (1)" />
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Python.data_set" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Python.data_set (1)" />
-        <item index="1" class="java.lang.String" itemvalue="Python.data_set" />
-        <item index="2" class="java.lang.String" itemvalue="Python.tensor_net" />
-        <item index="3" class="java.lang.String" itemvalue="Python.operations" />
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Python.data_set" />
       </list>
     </recent_temporary>
   </component>
@@ -387,21 +350,28 @@
       <option name="project" value="LOCAL" />
       <updated>1500956679309</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Restructured Project Structure">
+      <created>1500986394315</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1500986394315</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="26" width="1366" height="742" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2617302" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36876833" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34873325" sideWeight="0.63762814" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3888889" sideWeight="0.63982433" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24303405" sideWeight="0.6414956" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.8003096" sideWeight="0.6414956" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3885449" sideWeight="0.3601757" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.8003096" sideWeight="0.35850438" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -445,7 +415,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Or gate training success." />
-    <option name="LAST_COMMIT_MESSAGE" value="Or gate training success." />
+    <MESSAGE value="Restructured Project Structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="Restructured Project Structure" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -609,14 +580,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../lib/python3.5/site-packages/tensorflow/python/client/session.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="788" column="0" lean-forward="false" selection-start-line="788" selection-start-column="0" selection-end-line="788" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/neural_net/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -680,10 +643,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../lib/python3.5/site-packages/tensorflow/python/client/session.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="788" column="0" lean-forward="false" selection-start-line="788" selection-start-column="0" selection-end-line="788" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/text_processor/data_set.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="82" column="38" lean-forward="false" selection-start-line="82" selection-start-column="38" selection-end-line="82" selection-end-column="38" />
+        <state relative-caret-position="291">
+          <caret line="127" column="33" lean-forward="true" selection-start-line="127" selection-start-column="33" selection-end-line="127" selection-end-column="33" />
+          <folding>
+            <element signature="e#19#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/text_processor/equation_processor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
