@@ -51,10 +51,10 @@ class NeuralNet:
             # the columns of the layer is for a neuron.
             # each row of a column has i'th weight value for the neuron.
             weights = variable(random_normal([input_size, i], stddev=weight_stddev, mean=weight_mean),
-                               name="hidden_layer_weight_"+str(layer_no))
+                               name="hidden_layer_weight_" + str(layer_no))
 
             # the bias value for each neron
-            bias = variable(random_normal([1, i]), name='hidden_layer_bias_'+str(layer_no))
+            bias = variable(random_normal([1, i]), name='hidden_layer_bias_' + str(layer_no))
 
             # now for the next layer, the no of input to the neurons is the no of neurons in this layer.
             input_size = i
@@ -62,8 +62,8 @@ class NeuralNet:
             # append the weight and bias to the hidden_layer list
             self.hidden_layer.append((weights, bias))
 
-            #increase the layer_no counter
-            layer_no+=1
+            # increase the layer_no counter
+            layer_no += 1
 
         # declare how the neurons in each layer are connected.
 
@@ -107,7 +107,6 @@ class NeuralNet:
             input = np.array([args])
 
         # run the tensor graph for neuralNet and return the result
-        print (input)
         return self.session.run(self.output, {self.receptor: input})
 
     def __str__(self):
@@ -146,23 +145,31 @@ class NeuralNet:
 
     def train(self, input_array, output_array):
         # convert them into numpy array. Obvious line.
-        input_array=np.array(input_array)
-        output_array=np.array(output_array)
+        input_array = np.array(input_array)
+        output_array = np.array(output_array)
 
         # cost function to calculate the difference between the obtained and expected output.
         # this function is for classification problem only. may be use standard deviation function? don't know w
-        #cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(labels=self.train_output,logits=self.output ))
+        # cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(labels=self.train_output,logits=self.output ))
 
         # found better way to get the standard error function.
         # cost =sum(
         #           {expected(i) - obtained(i)}2
         #                       : for all i'th output of neural net.
         #           )
-        cost=tf.reduce_sum(tf.square(tf.subtract(self.train_output,self.output)))
-
+        cost = tf.reduce_sum(tf.square(tf.subtract(self.train_output, self.output)))
 
         # the optimizer to use. Don't have any idea what it does internally.
         optimizer = tf.train.AdamOptimizer().minimize(cost)
+        # optimizer = tf.train.AdadeltaOptimizer()
+        # optimizer = tf.train.AdagradDAOptimizer()
+        # optimizer = tf.train.AdagradOptimizer()
+        # optimizer = tf.train.GradientDescentOptimizer()
+        # optimizer = tf.train.FtrlOptimizer()
+        # optimizer = tf.train.SyncReplicasOptimizer()
+        # optimizer = tf.train.ProximalGradientDescentOptimizer()
+        # optimizer = tf.train.ProximalAdagradOptimizer()
+        # optimizer = tf.train.MomentumOptimizer()
 
 
         # initilize all the variables again.
@@ -170,21 +177,21 @@ class NeuralNet:
         self.session.run(global_variables_initializer())
 
         # the no of times we will train the net.
-        epoches = 10
+        epoches = 1000
         # now train the net.
         for _ in range(epoches):
-            optimized, cost = self.session.run([optimizer, cost],
-                                               feed_dict={self.receptor: input_array,self.train_output:output_array})
-
+            _oppt, _cost=self.session.run([optimizer,cost],feed_dict={self.receptor: input_array, self.train_output: output_array})
+            print("for %d'th epoch cost:"%(_),_cost)
 
 
 input_data = [
-         [1.0, 1.0],
-         [1.0, 0.0],
-         [0.0, 1.0],
-         [0.0, 0.0],
-         ]
-output_data= [
+    [1.0, 1.0],
+    [1.0, 0.0],
+    [0.0, 1.0],
+    [0.0, 0.0],
+]
+
+output_data = [
     [1.0],
     [1.0],
     [1.0],
@@ -192,12 +199,13 @@ output_data= [
 ]
 
 if __name__ == "__main__":
-    net = NeuralNet(2,2,1)
+    net = NeuralNet(2, 1)
     print(net)
 
     print(net.stimulate(*input_data))
-    print(net.stimulate(1,1))
 
-    #net.train(input_data,output_data)
+    net.train(input_data, output_data)
 
+    print(net.stimulate(*input_data))
+    print(net)
     net.session.close()
