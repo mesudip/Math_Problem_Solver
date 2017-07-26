@@ -93,14 +93,14 @@ class NeuralNet:
             iter(args[0])
             input = np.array(args)
             # check that the no. of inputs is correct for each input
-            if len(input[0]) is not self.columns[0]:
+            if len(input[0]) != self.columns[0]:
                 raise Exception("Invalid no of inputs to the neural net.",
                                 "Expected %d arguments got %d." % (self.columns[0], len(args)))
 
         # if the provided input is a single set of inputs to receptor
         except TypeError as e:
             # check if the provided no of arguments match with the no of inputs to the neural net.
-            if len(args) is not self.columns[0]:
+            if len(args) != self.columns[0]:
                 raise Exception("Invalid no of inputs to the neural net",
                                 "Expected %d arguments got %d" % (self.columns[0], len(args)))
             input = np.array([args])
@@ -142,9 +142,11 @@ class NeuralNet:
         # return the str with the neural net description.
         return __out
 
-    def train(self, input_array, output_array,cost=None,optimizer=None,error=None):
+    def train(self, input_array, output_array, epoches=100, cost=None, optimizer=None, error=None):
         # convert them into numpy array. Obvious line.
+
         input_array = np.array(input_array)
+
         output_array = np.array(output_array)
 
         # cost function to calculate the difference between the obtained and expected output.
@@ -157,7 +159,7 @@ class NeuralNet:
         #                       : for all i'th output of neural net.
         #           )
         if cost is None:
-            delta=tf.subtract(self.train_output,self.output)
+            delta = tf.subtract(self.train_output, self.output)
             cost = tf.reduce_sum(tf.square(delta))
 
         # if we don't need separate error function, the error function will be same as the cost.
@@ -181,31 +183,30 @@ class NeuralNet:
         # This will reinitialize the weights and bias of the neurons in neural net too.
         self.session.run(global_variables_initializer())
 
-        # the no of times we will train the net.
-        epoches = 100000
         # now train the net.
-        accuracy=0
-        for _ in range(epoches):
-            _oppt, _cost=self.session.run([optimizer,cost],feed_dict={self.receptor: input_array, self.train_output: output_array})
-            print("for %d'th epoch cost:"%(_),_cost)
+        accuracy = 0
+        for i in range(epoches):
+            _opt, _cost = self.session.run([optimizer, cost],
+                                           feed_dict={self.receptor: input_array, self.train_output: output_array})
+            print("for %d'th epoch cost:" % i, _cost)
 
-
-input_data = [
-    [1.0, 1.0],
-    [1.0, 0.0],
-    [0.0, 1.0],
-    [0.0, 0.0],
-]
-
-output_data = [
-    [0.0],
-    [1.0],
-    [1.0],
-    [0.0],
-]
 
 if __name__ == "__main__":
-    net = NeuralNet(2,2, 1)
+    input_data = [
+        [1.0, 1.0],
+        [1.0, 0.0],
+        [0.0, 1.0],
+        [0.0, 0.0],
+    ]
+
+    output_data = [
+        [0.0],
+        [1.0],
+        [1.0],
+        [0.0],
+    ]
+
+    net = NeuralNet(2, 2, 1)
     print(net)
 
     print(net.stimulate(*input_data))

@@ -41,15 +41,15 @@ def generalize(equation, input_numbers):
 
     # make sure that the number of digits in equation equals that in the question.
     if len(numbers) is not len(input_numbers):
-        raise Exception("All digit parameters not used", "Parameter Mapping Fault")
+        raise ValueError("All digit parameters not used", "Parameter Mapping Fault")
     sorted(numbers)
 
     # now map the numbers in the sentence to the ones in the equation by index.
     for number_index in numbers:
         try:
             index = input_numbers.index(float(tokens[number_index]))
-        except Exception as e:
-            raise Exception("Cannot map input number to numbers in equaiton",
+        except ValueError as e:
+            raise ValueError("Cannot map input number to numbers in equaiton",
                             "Input ->" + str(equation) + ',' + str(input_numbers), e)
 
         tokens[number_index] = 'N' + str(index)
