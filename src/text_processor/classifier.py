@@ -156,6 +156,5 @@ if __name__ == "__main__":
                 if _tree.label() == 'Noun':
                     print("\tFound ", _tree)
                     context.add_node(tuple([a[0] for a in _tree.leaves()]) if len(_tree.leaves()) > 1 else _tree[0][0])
-
     context.draw()
 # tree.draw()

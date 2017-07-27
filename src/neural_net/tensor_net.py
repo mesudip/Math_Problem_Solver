@@ -207,13 +207,7 @@ if __name__ == "__main__":
     ]
 
     net = NeuralNet(2, 2, 1)
-    print(net)
 
-    print(net.stimulate(*input_data))
 
-    net.train(input_data, output_data)
 
-    print(net.stimulate(*input_data))
-    print(net)
-    [].inde
     net.session.close()

@@ -41,6 +41,7 @@ def generalize(equation, input_numbers):
 
     # make sure that the number of digits in equation equals that in the question.
     if len(numbers) is not len(input_numbers):
+        print("Mapping fault on :",numbers,input_numbers,equation)
         raise ValueError("All digit parameters not used", "Parameter Mapping Fault")
     sorted(numbers)
 
