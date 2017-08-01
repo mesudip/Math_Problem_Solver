@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 import json
-import numpy as np
-import sys
 import sqlite3
-import nltk
+import sys
 from collections import Counter
+
+import nltk
+
 from text_processor import equation_processor
-from array import array
 
 
 # from text_processor.classifier import Classifier
@@ -204,7 +204,6 @@ class Preprocessor:
 
         # make set of best_equations and get only those data which have those equation.
         set_equations = set(best_equations)
-        print(set_equations)
 
         best_data = [x for x in self.data if x['equation'] in set_equations]
 
@@ -265,8 +264,8 @@ class Preprocessor:
         db.close()
 
     @staticmethod
-    def get_from_file(file_name='../../dataset/preprocessed_data.sqlite', file_type='sqlite'):
-        preprocessor = Preprocessor(None,passive=True)
+    def get_from_file(file_name='../../dataset/preprocessed_data.json', file_type='sqlite'):
+        preprocessor = Preprocessor(None, passive=True)
         if file_type == 'sqlite':
             db = sqlite3.connect(file_name)
             cursor = db.cursor()
@@ -327,7 +326,7 @@ class Net_feeder:
 
         for data in data_set:
 
-            feed = [0.] * (len(self.verb_index) + 3)
+            feed = [0.] * len(self.verb_index)
             output = [0.] * len(self.equation_index)
 
             verbs_of_data = data['verbs']
@@ -335,11 +334,7 @@ class Net_feeder:
                 feed[self.verb_index[verb]] = verbs_of_data[verb]
 
             output[self.equation_index[data['equation']]] = 1.0
-            bits = [float(x) for x in bin(len(data['digits']))[2:]]
-            start = -1
-            for bit in bits:
-                output[start] = bit
-                start -= 1
+            feed.append(float(len(data['digits'])))
 
             data['input'] = feed
             data['output'] = output
@@ -354,33 +349,33 @@ class Net_feeder:
         outputs = []
 
         for data in data_set:
-
-            # feed = [0.0] * (len(self.verb_index) + 3)
             feed = [0.0] * (len(self.verb_index))
-            output = [0.0] * len(self.equation_index)
+            #output = [0.0] * len(self.equation_index)
 
             verbs_of_data = data['verbs']
             for verb in verbs_of_data:
                 feed[self.verb_index[verb]] = verbs_of_data[verb]
 
-            output[self.equation_index[data['equation']]] = 1.0
-            bits = [float(x) for x in bin(len(data['digits']))[2:]]
-            start = -1
+            #output[self.equation_index[data['equation']]] = 1.0
+            feed.append(float(len(data['digits'])))
 
             # for bit in bits:
             #     feed[start] = bit
             #     start -= 1
 
             feeds.append(feed)
-            outputs.append(output)
+            outputs.append(self.equation_index[data['equation']])
         self.data_set = data_set
         return feeds, outputs
 
     def get_vectors_from_extended_data_set(self, data_set=None):
         if data_set is None:
-            if self.data_set is None:
-                raise ValueError("Data Set not loaded")
-            data_set = self.data_set
+            try:
+                if self.data_set is None:
+                    raise ValueError("Data Set not loaded")
+            except AttributeError as e:
+                raise ValueError("Dataset not loaded")
+
         feeds = []
         outputs = []
 
@@ -434,14 +429,10 @@ class Net_feeder:
             for verb in verbs:
                 # keep the count in the input neuron.
                 feed[self.verb_index[verb]] = verbs[verb]
+            feed.append(len(digits))
         except ValueError:
             raise ValueError("Error in identifying digit tokens.")
 
-        bits = [float(x) for x in bin(len(digits))[2:]]
-        # start = -1
-        # for bit in bits:
-        #     feed[start] = bit
-        #     start -= 1
         return feed, digits, verbs
 
     @staticmethod
@@ -455,11 +446,13 @@ class Net_feeder:
             feeder.data_set = json_data['data']
             return feeder
         elif filetype == 'sqlite':
+
             raise Exception("Sqlite feed currently not supported")
 
-    def dump_json(self,filename='../../dataset/dataset_for_neural_net.json'):
+    def dump_json(self, filename='../../dataset/dataset_for_neural_net.json'):
         json.dump({'verbs': self.verb_index, 'equations': self.equation_index, 'data': self.data_set},
                   open(filename, 'w'))
+
 
 if __name__ == "__main__":
     __processor = Preprocessor.get_from_file()
