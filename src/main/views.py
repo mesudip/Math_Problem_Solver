@@ -35,7 +35,15 @@ def addToModel(request):
         print('Question:', question)
         print('Answer  :', computed_result)
         print()
-        q = Question(question=question, answer=answer, date=timezone.now())
+        if 'error' in computed_result:
+            computed_result['answer']=''
+            computed_result['equation']=''
+
+        else:
+            q = Question(question=question, answer=int(computed_result['answer']), date=timezone.now())
+            q.save()
+
+
         return http.JsonResponse(computed_result)
 
     return http.HttpResponse("not for direct call")

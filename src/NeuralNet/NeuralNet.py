@@ -8,7 +8,7 @@ import tensorflow as tf
 
 from text_processor.data_set import Net_feeder
 from text_processor.data_set import Preprocessor
-
+import traceback
 
 
 # the **cking warning messages can be discarded into the null file.
@@ -56,7 +56,7 @@ _input = np.array(_input, dtype=np.float32)
 _output = np.array(_output, dtype=np.int32)
 
 print("Begin Training :")
-for i in range(50, 900,50):
+for i in range(50, 1000,50):
     ai_net.fit(_input, _output, steps=50)
     print("No of complete iterations in training :", i)
 print("End training")
@@ -77,7 +77,7 @@ def get_result(user_input):
 
         ret = ai_net.predict(x=np.array([net_input], dtype=np.float32), as_iterable=False)[0]
         equation = feeder.get_equation_from_index(ret)
-        result["equation :"] = equation
+        result["equation"] = equation
         try:
             N0 = params[0];
             N1 = params[1];
@@ -90,6 +90,7 @@ def get_result(user_input):
         result['answer'] = ans
     except Exception as e:
         result['error'] = "Error while parsing question :" + str(e.args)
+        traceback.print_exc()
     return result
 
 if __name__=="__main__":

@@ -85,7 +85,18 @@ $(function(){
        },
        success: function(result) {
            answer = result.answer;
+           equation = result.equation;
+           var error = result.error;
            $('#answer').text(answer);
+           $('#equation').text(equation);
+           $('#error').text(error);
+           if(error != null)
+           {
+           $('#error').removeClass('hidden');
+           }
+           else{
+           $('#error').addClass('hidden');
+           }
        },
        error: function(result) {
            alert('recent question update failed')
@@ -98,6 +109,9 @@ $(function(){
     });
     $("#search").bind('input', function(){
         $('#answer').text('');
+        $('#equation').text('');
+        $('#error').text('');
+        $('#error').addClass('hidden');
         $('#selectanswer').addClass('hidden');
         $("#answerdiv").addClass('hidden');
 

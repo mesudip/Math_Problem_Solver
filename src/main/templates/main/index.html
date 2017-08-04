@@ -32,7 +32,7 @@
            <span class="icon-bar"></span>
            <span class="icon-bar"></span>
          </button>
-         <a class="navbar-brand" href="#">Project name</a>
+         <a class="navbar-brand" href="#">Word Problem Solver</a>
        </div>
        <div id="navbar" class="collapse navbar-collapse">
          <ul class="nav navbar-nav">
@@ -58,16 +58,21 @@
               </form>
          <div class="row hidden" id="answerdiv">
            <div class="col-xs-12 col-lg-12">
+               <h2>Equation:<span id="equation"></span></h2>
              <h2>Answer:<span id="answer"></span></h2>
+               <p><h6><span id="error" class="alert alert-danger hidden"></span></h6></p><br>
 			 <div class="jumbotron alert alert-info">
 				 Got Wrong Answer? Help us by clicking incorrect button!
 			 </div>
 
 			<a class="btn btn-primary" role="button" id="incorrect">Incorrect Answer</a>
         	</div>
-			<div class="col-xs-12 col-lg-12 hidden" id="selectanswer">
-              <h2>Select the equation type and correct answer</span></h2>
-             <span class="btn btn-default">Correct Answer</span>
+             <hr>
+			<div class="col-xs-12 col-lg-12 jumbotron alert alert-success hidden" id="selectanswer">
+              <h2>Select the equation type and correct answer</h2>
+                <input type="text" class="form-control" id="correctequation" placeholder="Equation">
+                <input type="text" class="form-control" id="correctanswer" placeholder="Answer">
+             <span class="btn btn-default">Submit</span>
          	</div>
            </div><!--/.col-xs-6.col-lg-4-->
          </div><!--/row-->
